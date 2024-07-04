@@ -12,7 +12,7 @@ from data_quality import PostgresDataQualityOperator
 import sql_queries
 
 default_args = {
-    'owner' : 'pathairs',
+    'owner' : 'teddy',
     'retries'  : 1,
     'retry_delay' : datetime.timedelta(minutes=3),
 }
@@ -20,7 +20,7 @@ default_args = {
 dag = DAG(
     'hands_on_test',
     default_args = default_args,
-    description = 'lineman wongnai data engineer test',
+    description = 'home assignment',
     start_date = days_ago(1),
     schedule_interval = '@daily'
 )

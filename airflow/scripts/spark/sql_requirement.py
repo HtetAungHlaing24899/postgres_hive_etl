@@ -26,5 +26,5 @@ def rename_csv_from_spark(spark_csv_path, output_filename):
     os.rename(fname, f'/home/sql_result/{output_filename}')
     shutil.rmtree(spark_csv_path)
 
-rename_csv_from_spark('/home/sql_result/discount', 'discount.csv')
-rename_csv_from_spark('/home/sql_result/cooking', 'cooking.csv')
+rename_csv_from_spark('/home/sql_result/discount', 'average_discount_categories.csv')
+rename_csv_from_spark('/home/sql_result/cooking', 'cooking_bin_row_count.csv')

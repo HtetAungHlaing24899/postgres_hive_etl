@@ -2,7 +2,7 @@ hdfs dfs -rm -r /user/sqoop
 hdfs dfs -mkdir /user/sqoop
 
 /usr/lib/sqoop/bin/sqoop import \
---connect jdbc:postgresql://database:5432/lineman_wongnai \
+--connect jdbc:postgresql://database:5432/temp_db \
 --table order_detail \
 --username postgres \
 --password passw0rd \
@@ -11,7 +11,7 @@ hdfs dfs -mkdir /user/sqoop
 --target-dir /user/sqoop/order_detail \
 
 /usr/lib/sqoop/bin/sqoop import \
---connect jdbc:postgresql://database:5432/lineman_wongnai \
+--connect jdbc:postgresql://database:5432/temp_db \
 --table restaurant_detail \
 --username postgres \
 --password passw0rd \

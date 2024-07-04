@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS order_detail (
 );'''
 
 copy_order_detail_data = '''
-COPY order_detail FROM '/var/lib/postgresql/data/lmwn/order_detail.csv' DELIMITER ',' CSV HEADER;
+COPY order_detail FROM '/var/lib/postgresql/csv_files/order_detail.csv' DELIMITER ',' CSV HEADER;
 '''
 
 drop_restaurant_detail_table = '''
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS restaurant_detail (
 );'''
 
 copy_restaurant_detail_data = '''
-COPY restaurant_detail FROM '/var/lib/postgresql/data/lmwn/restaurant_detail.csv' DELIMITER ',' CSV HEADER;
+COPY restaurant_detail FROM '/var/lib/postgresql/csv_files//restaurant_detail.csv' DELIMITER ',' CSV HEADER;
 '''
 
 postgres_data_quality_check = {
